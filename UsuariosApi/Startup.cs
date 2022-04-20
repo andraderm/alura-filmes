@@ -37,6 +37,8 @@ namespace UsuariosApi
                 .AddEntityFrameworkStores<UsuarioDbContext>();
             services.AddControllers();
             services.AddScoped<CadastroService, CadastroService>();
+            services.AddScoped<LoginService, LoginService>();
+            services.AddScoped<TokenService, TokenService>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
